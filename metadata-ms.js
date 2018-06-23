@@ -2,14 +2,18 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({extended: false});
+const formidable = require("formidable");
+
 
 app.get("/", (req, res) => {
-  return res.send("A form to submit the file.");
+  // PMT: curl http://localhost:5000
+  return res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/analyse-file", urlencodedParser, (req, res) => {
   // curl -d upfile=@curlTestFile http://localhost:5000/analyse-file
-  let file = req.body.upfile;
+  let form = new formidable.IncomingForm();
+  form.parse(req, (err, fields, files) => {})
   return res.send("Process the file and output the metadata.")
 });
 
