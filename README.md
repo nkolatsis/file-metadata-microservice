@@ -4,4 +4,4 @@ A microservice that returns the metadata of uploaded files. Developed for the Fr
 
 Github: https://github.com/nkolatsis/file-metadata-microservice.git
 
-Live demo: https://speckle-beret.glitch.me
+Live demo: https://file-metadata-ms-nkolatsis.glitch.me
